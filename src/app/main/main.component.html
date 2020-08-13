@@ -1,0 +1,14 @@
+<div class="center">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Hero</mat-label>
+          <input matInput placeholder="Add a hero" [(ngModel)]="hero" name="hero">
+        </mat-form-field>
+        <button mat-stroked-button color="primary" (click)="addHero()">ADD</button>
+      </form>
+      <div *ngFor="let hero of all_heroes">
+          {{hero.id}}
+        {{hero.name}} 
+        <button mat-stroked-button color="primary" (click)="addAvenger(hero)">Avenger</button>
+      </div>
+</div>
